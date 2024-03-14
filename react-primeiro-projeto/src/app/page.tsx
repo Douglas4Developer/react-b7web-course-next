@@ -1,20 +1,26 @@
-import { Card } from "@/components/Card";
-import { Person } from "@/components/Person";
- 
+import { peopleList } from '@/data/peopleList';
 
- 
- const Page = () =>{
+const Page = () => {
+
+
+
+
   return (
-
     <div>
       <h1 className="font-bold  text-2xl">Olá Mundo</h1> 
       <h3>Algum outro texto</h3>
         /* PROPS para dados dinamicos */
+        
+      {peopleList.length > 0 && 
+        <ul>
+          {  peopleList.map(person =>
+             <li key={person.id}>{person.name} - {person.profession}</li>
+          )}
+        </ul>
+        }
 
-        <Card
-            phrase ="Alguma frase top"
-            author="Douglas COACH"
-        />
+     
+     
    
 
     </div>
