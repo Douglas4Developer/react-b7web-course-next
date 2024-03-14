@@ -11,12 +11,10 @@ import { Person } from "@/components/Person";
       <h3>Algum outro texto</h3>
         /* PROPS para dados dinamicos */
 
-        <Card>
-         <>
-            <h3 className="text-3xl font-bold italic"> Frase de efeito</h3>
-            <p className="text-right text-sm"> Autor desconhecido </p>
-         </>
-        </Card>
+        <Card
+            phrase ="Alguma frase top"
+            author="Douglas COACH"
+        />
    
 
     </div>
